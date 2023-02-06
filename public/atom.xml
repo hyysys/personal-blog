@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Star Lauguageの个人博客</title>
+  
+  
+  <link href="https://hyyblog.netlify.app/atom.xml" rel="self"/>
+  
+  <link href="https://hyyblog.netlify.app/"/>
+  <updated>2023-02-06T10:11:19.248Z</updated>
+  <id>https://hyyblog.netlify.app/</id>
+  
+  <author>
+    <name>hyy</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>python字典</title>
+    <link href="https://hyyblog.netlify.app/2023/02/06/python%E5%AD%97%E5%85%B8/"/>
+    <id>https://hyyblog.netlify.app/2023/02/06/python%E5%AD%97%E5%85%B8/</id>
+    <published>2023-02-06T09:30:58.000Z</published>
+    <updated>2023-02-06T10:11:19.248Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="python字典基础知识"><a href="#python字典基础知识" class="headerlink" title="python字典基础知识"></a>python字典基础知识</h1><h2 id="字典简介"><a href="#字典简介" class="headerlink" title="字典简介"></a>字典简介</h2><p>字典是另一种可变容器模型，且可存储任意类型对象。</p><p>字典的每个键值 key:value 对用冒号 : 分割，每个键值对之间用逗号 , 分割，整个字典包括在花括号 {} 中 ,格式如下所示：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">d = &#123;key1 : value1, key2 : value2 &#125;</span><br></pre></td></tr></table></figure><p>注意：dict 作为 Python 的关键字和内置函数，变量名不建议命名为 dict。<br>键一般是唯一的，如果重复最后的一个键值对会替换前面的，值不需要唯一。<br>值可以取任何数据类型，但键必须是不可变的，如字符串，数字或元组。<br>一个简单的字典实例：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">tinydict = &#123;<span class="string">&#x27;Alice&#x27;</span>: <span class="string">&#x27;2341&#x27;</span>, <span class="string">&#x27;Beth&#x27;</span>: <span class="string">&#x27;9102&#x27;</span>, <span class="string">&#x27;Cecil&#x27;</span>: <span class="string">&#x27;3258&#x27;</span>&#125;</span><br><span class="line">tinydict1 = &#123; <span class="string">&#x27;abc&#x27;</span>: <span class="number">456</span> &#125;</span><br><span class="line">tinydict2 = &#123; <span class="string">&#x27;abc&#x27;</span>: <span class="number">123</span>, <span class="number">98.6</span>: <span class="number">37</span> &#125;</span><br></pre></td></tr></table></figure><h2 id="访问字典里的值"><a href="#访问字典里的值" class="headerlink" title="访问字典里的值"></a>访问字典里的值</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">thisdict =&#123;</span><br><span class="line">  <span class="string">&quot;brand&quot;</span>: <span class="string">&quot;Porsche&quot;</span>,</span><br><span class="line">  <span class="string">&quot;model&quot;</span>: <span class="string">&quot;911&quot;</span>,</span><br><span class="line">  <span class="string">&quot;year&quot;</span>: <span class="number">1963</span></span><br><span class="line">&#125;</span><br><span class="line">x = thisdict[<span class="string">&quot;model&quot;</span>]</span><br><span class="line"><span class="built_in">print</span>(x)</span><br></pre></td></tr></table></figure><h2 id="更改字典中的值"><a href="#更改字典中的值" class="headerlink" title="更改字典中的值"></a>更改字典中的值</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">thisdict =&#123;</span><br><span class="line">  &quot;brand&quot;: &quot;Porsche&quot;,</span><br><span class="line">  &quot;model&quot;: &quot;911&quot;,</span><br><span class="line">  &quot;year&quot;: 1963</span><br><span class="line">&#125;</span><br><span class="line">thisdict[&quot;year&quot;] = 2019</span><br></pre></td></tr></table></figure><h2 id="遍历字典"><a href="#遍历字典" class="headerlink" title="遍历字典"></a>遍历字典</h2><p>您可以使用 for 循环遍历字典。</p><p>循环遍历字典时，返回值是字典的键，但也有返回值的方法。</p><p>实例<br>逐个打印字典中的所有键名：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">for x in thisdict:</span><br><span class="line">  print(x)</span><br></pre></td></tr></table></figure><p>实例<br>通过使用 items() 函数遍历键和值：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">for x, y in thisdict.items():</span><br><span class="line">  print(x, y)</span><br></pre></td></tr></table></figure><h2 id="添加项目"><a href="#添加项目" class="headerlink" title="添加项目"></a>添加项目</h2><p>通过使用新的索引键并为其赋值，可以将项目添加到字典中：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">thisdict =&#123;</span><br><span class="line">  &quot;brand&quot;: &quot;Porsche&quot;,</span><br><span class="line">  &quot;model&quot;: &quot;911&quot;,</span><br><span class="line">  &quot;year&quot;: 1963</span><br><span class="line">&#125;</span><br><span class="line">thisdict.pop(&quot;model&quot;)</span><br><span class="line">print(thisdict)</span><br></pre></td></tr></table></figure><h2 id="删除项目"><a href="#删除项目" class="headerlink" title="删除项目"></a>删除项目</h2><p>pop() 方法删除具有指定键名的项：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">thisdict =&#123;</span><br><span class="line">  &quot;brand&quot;: &quot;Porsche&quot;,</span><br><span class="line">  &quot;model&quot;: &quot;911&quot;,</span><br><span class="line">  &quot;year&quot;: 1963</span><br><span class="line">&#125;</span><br><span class="line">thisdict.pop(&quot;model&quot;)</span><br><span class="line">print(thisdict)</span><br></pre></td></tr></table></figure><p>del 关键字删除具有指定键名的项目(也可以完全删除整个字典)：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">thisdict =&#123;</span><br><span class="line">  &quot;brand&quot;: &quot;Porsche&quot;,</span><br><span class="line">  &quot;model&quot;: &quot;911&quot;,</span><br><span class="line">  &quot;year&quot;: 1963</span><br><span class="line">&#125;</span><br><span class="line">del thisdict[&quot;model&quot;]</span><br><span class="line">print(thisdict)</span><br></pre></td></tr></table></figure><h2 id="dict-构造函数"><a href="#dict-构造函数" class="headerlink" title="dict()构造函数"></a>dict()构造函数</h2><p>也可以使用 dict() 构造函数创建新的字典：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">thisdict = dict(brand=&quot;Porsche&quot;, model=&quot;911&quot;, year=1963)</span><br><span class="line"># 请注意，关键字不是字符串字面量</span><br><span class="line"># 请注意，使用了等号而不是冒号来赋值</span><br><span class="line">print(thisdict)</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;python字典基础知识&quot;&gt;&lt;a href=&quot;#python字典基础知识&quot; class=&quot;headerlink&quot; title=&quot;python字典基础知识&quot;&gt;&lt;/a&gt;python字典基础知识&lt;/h1&gt;&lt;h2 id=&quot;字典简介&quot;&gt;&lt;a href=&quot;#字典简介&quot; cla</summary>
+      
+    
+    
+    
+    <category term="python基础" scheme="https://hyyblog.netlify.app/categories/python%E5%9F%BA%E7%A1%80/"/>
+    
+    
+    <category term="python study 基础" scheme="https://hyyblog.netlify.app/tags/python-study-%E5%9F%BA%E7%A1%80/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://hyyblog.netlify.app/2023/02/05/hello-world/"/>
+    <id>https://hyyblog.netlify.app/2023/02/05/hello-world/</id>
+    <published>2023-02-05T12:03:14.696Z</published>
+    <updated>2023-02-05T11:59:03.483Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt; for</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+</feed>
