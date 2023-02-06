@@ -2,8 +2,8 @@
 title: python字典
 date: 2023-02-06 17:30:58
 tags: python
-study
-基础
+      study
+      基础
 categories: python基础
 cover: "./img/gf-11.jpg"
 ---
