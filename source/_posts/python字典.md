@@ -5,7 +5,7 @@ tags: python
       study
       基础
 categories: python基础
-cover: "./img/gf-11.jpg"
+cover: "../img/gf-11.jpg"
 ---
 
 # python字典基础知识
