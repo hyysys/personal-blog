@@ -93,10 +93,10 @@ avatar:
 disable_top_img: false
 
 # The banner image of home page
-index_img: "./img/1.jpeg"
+index_img: "./img/2.jpeg"
 
 # If the banner of page not setting, it will show the top_img
-default_top_img: "./img/dt-04.jpg"
+default_top_img: "./img/3.jpeg"
 
 # The banner image of archive page
 archive_img:
