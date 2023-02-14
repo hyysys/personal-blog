@@ -86,17 +86,17 @@ favicon: /img/favicon.png
 
 # Avatar (頭像)
 avatar:
-  img: https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png
+  img: "./source/img/1.jpeg"
   effect: false
 
 # Disable all banner image
 disable_top_img: false
 
 # The banner image of home page
-index_img: "./img/2.jpeg"
+index_img: "./source/img/2.jpeg"
 
 # If the banner of page not setting, it will show the top_img
-default_top_img: "./img/3.jpeg"
+default_top_img: "./source/img/3.jpeg"
 
 # The banner image of archive page
 archive_img:
