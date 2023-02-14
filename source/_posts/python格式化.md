@@ -4,7 +4,7 @@ date: 2023-02-07 12:13:16
 tags: python
       study
       基础
-categories: pyhton基础
+categories: python基础
 cover: "../img/yh-04.jpg"
 ---
 # python输出格式化
